@@ -1,0 +1,408 @@
+.DialogFadeInDown {
+  animation: DialogFadeInDown 1s;
+  animation-fill-mode: forwards;
+}
+.DialogFadeOutUp {
+  animation: DialogFadeOutUp 1s;
+  animation-fill-mode: forwards;
+}
+.DialogSlideUp {
+  animation: DialogSlideUp 1s;
+  animation-fill-mode: forwards;
+}
+.DialogSlideDown {
+  animation: DialogSlideDown 1s;
+  animation-fill-mode: forwards;
+}
+.DialogZoomIn {
+  animation: DialogZoomIn 1s;
+  animation-fill-mode: forwards;
+  transform-origin: center -50%;
+}
+.DialogZoomOut {
+  animation: DialogZoomOut 1s;
+  animation-fill-mode: forwards;
+  transform-origin: center -50%;
+}
+.DialogTada {
+  animation: DialogTada 1s;
+  animation-fill-mode: forwards;
+}
+.DialogFadeIn {
+  animation: DialogFadeIn 1s;
+  animation-fill-mode: forwards;
+}
+.DialogFadeOut {
+  animation: DialogFadeOut 1s;
+  animation-fill-mode: forwards;
+}
+.DialogPulse {
+  animation: DialogPulse 1s;
+  animation-fill-mode: forwards;
+}
+.DialogRubberBand {
+  animation: DialogRubberBand 1s;
+  animation-fill-mode: forwards;
+}
+.DialogBounce {
+  animation: DialogBounce 1s;
+  animation-fill-mode: forwards;
+}
+.DialogHeartBeat {
+  animation: DialogHeartBeat 1s;
+  animation-fill-mode: forwards;
+}
+.DialogBounceIn {
+  animation: DialogBounceIn 1s;
+  animation-fill-mode: forwards;
+}
+.DialogBounceOut {
+  animation: DialogBounceOut 1s;
+  animation-fill-mode: forwards;
+}
+.DialogFlipInY {
+  animation: DialogFlipInY 1s;
+  animation-fill-mode: forwards;
+}
+.DialogFlipOutY {
+  animation: DialogFlipOutY 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes DialogFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes DialogFadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes DialogFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -200%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes DialogFadeOutUp {
+  to {
+    opacity: 0;
+    transform: translate3d(0, -200%, 0);
+  }
+  from {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes DialogSlideUp {
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  from {
+    transform: translate3d(0, 300px, 0);
+  }
+}
+@keyframes DialogSlideDown {
+  to {
+    transform: translate3d(0, 300px, 0);
+  }
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes DialogZoomIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale3d(0.98, 0.98, 0.98);
+    transform-origin: center;
+  }
+  50% {
+    opacity: 1;
+    transform-origin: center;
+  }
+}
+@keyframes DialogZoomOut {
+  from {
+    opacity: 1;
+    transform-origin: center;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-50%) scale3d(0.96, 0.96, 0.96);
+    transform-origin: center;
+  }
+  to {
+    opacity: 0;
+    transform-origin: center;
+  }
+}
+@keyframes DialogTada {
+  from {
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: translateY(-50%) scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-50%) scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: translateY(-50%) scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes DialogPulse {
+  from {
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: translateY(-50%) scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes DialogRubberBand {
+  from {
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: translateY(-50%) scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: translateY(-50%) scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: translateY(-50%) scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: translateY(-50%) scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes DialogBounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateY(-50%) translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translateY(-50%) translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translateY(-50%) translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translateY(-50%) translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes DialogHeartBeat {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  14% {
+    transform: translateY(-50%) scale(1.3);
+  }
+
+  28% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  42% {
+    transform: translateY(-50%) scale(1.3);
+  }
+
+  70% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes DialogBounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: translateY(-50%) scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: translateY(-50%) scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-50%) scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: translateY(-50%) scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes DialogBounceOut {
+  20% {
+    transform: translateY(-50%) scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
+    opacity: 1;
+    transform: translateY(-50%) scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-50%) scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes DialogFlipInY {
+  from {
+    transform: translateY(-50%) perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(-50%) perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: translateY(-50%) perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(-50%) perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: translateY(-50%) perspective(400px);
+  }
+}
+
+@keyframes DialogFlipOutY {
+  from {
+    transform: translateY(-50%) perspective(400px);
+  }
+
+  30% {
+    transform: translateY(-50%) perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-50%) perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.overlay-animation-duration-100 { animation-duration: .1s !important; }
+.overlay-animation-duration-200 { animation-duration: .2s !important; }
+.overlay-animation-duration-300 { animation-duration: .3s !important; }
+.overlay-animation-duration-400 { animation-duration: .4s !important; }
+.overlay-animation-duration-500 { animation-duration: .5s !important; }
+.overlay-animation-duration-600 { animation-duration: .6s !important; }
+.overlay-animation-duration-700 { animation-duration: .7s !important; }
+.overlay-animation-duration-800 { animation-duration: .8s !important; }
+.overlay-animation-duration-900 { animation-duration: .9s !important; }
+.overlay-animation-duration-1000 { animation-duration: 1s !important; }
+.overlay-animation-duration-1500 { animation-duration: 1.5s !important; }
+.overlay-animation-duration-2000 { animation-duration: 2s !important; }
+.overlay-animation-duration-2500 { animation-duration: 2.5s !important; }
+.overlay-animation-duration-3000 { animation-duration: 3s !important; }
+.overlay-animation-duration-3500 { animation-duration: 3.5s !important; }
+.overlay-animation-duration-4000 { animation-duration: 4s !important; }
+.overlay-animation-duration-4500 { animation-duration: 4.5s !important; }
+.overlay-animation-duration-5000 { animation-duration: 5s !important; }
+.overlay-animation-duration-5500 { animation-duration: 5.5s !important; }
+.overlay-animation-duration-6000 { animation-duration: 6s !important; }
+
+.dialog-animation-duration-100 { animation-duration: .1s !important; }
+.dialog-animation-duration-200 { animation-duration: .2s !important; }
+.dialog-animation-duration-300 { animation-duration: .3s !important; }
+.dialog-animation-duration-400 { animation-duration: .4s !important; }
+.dialog-animation-duration-500 { animation-duration: .5s !important; }
+.dialog-animation-duration-600 { animation-duration: .6s !important; }
+.dialog-animation-duration-700 { animation-duration: .7s !important; }
+.dialog-animation-duration-800 { animation-duration: .8s !important; }
+.dialog-animation-duration-900 { animation-duration: .9s !important; }
+.dialog-animation-duration-1000 { animation-duration: 1s !important; }
+.dialog-animation-duration-1500 { animation-duration: 1.5s !important; }
+.dialog-animation-duration-2000 { animation-duration: 2s !important; }
+.dialog-animation-duration-2500 { animation-duration: 2.5s !important; }
+.dialog-animation-duration-3000 { animation-duration: 3s !important; }
+.dialog-animation-duration-3500 { animation-duration: 3.5s !important; }
+.dialog-animation-duration-4000 { animation-duration: 4s !important; }
+.dialog-animation-duration-4500 { animation-duration: 4.5s !important; }
+.dialog-animation-duration-5000 { animation-duration: 5s !important; }
+.dialog-animation-duration-5500 { animation-duration: 5.5s !important; }
+.dialog-animation-duration-6000 { animation-duration: 6s !important; }
