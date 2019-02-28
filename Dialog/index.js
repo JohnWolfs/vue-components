@@ -45,7 +45,7 @@ Dialog.install = function (Vue, options) {
   }
 
   /** 展示对话框 */
-  const show = (type, option, config) => {
+  const open = (type, option, config) => {
     if (!type) {
       throw 'param type required'
     }
@@ -77,10 +77,14 @@ Dialog.install = function (Vue, options) {
     clear()
   }
 
+  const close = () => {
+    dialogVm.closeDialog()
+  }
+
   /** dialog对外接口 */
   Vue.prototype.$dialog = {
-    show: show,
-    hide: hide
+    open: open,
+    close: close
   }
 }
 
